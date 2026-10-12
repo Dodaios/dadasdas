@@ -7,7 +7,11 @@
  * they have to do by hand: the app looked for updates at the repository's old
  * address, so releases up to `LAST_OLD_UPDATER_VERSION` do not see newer ones.
  *
- * Every statement is checkable. The install lines come from
+ * Every statement is checkable. The update check of 3.1.1 is
+ * `_fetch_latest_release` in the app's `jarvis/ui/web/update_routes.py`: it
+ * asks api.github.com for the latest release under the old repository name,
+ * GitHub answers 301 since the move, and the check treats anything but 200 as
+ * "no update". The install lines come from
  * `src/lib/install.ts`, which holds them verbatim from the app's README, and
  * the README is also the source for "run it again and it updates your
  * existing installation". Nothing here promises a date or a version that does
@@ -68,10 +72,11 @@ import { FORMER_NAME, LAST_OLD_UPDATER_VERSION } from "@/lib/rename";
 
   <h2 id="update">If you already have it installed: update once</h2>
   <p>
-    Versions up to and including {LAST_OLD_UPDATER_VERSION} look for updates
-    at the repository's old address. Since the move they no longer find new
-    releases, so the app will not offer you an update by itself. Update once
-    by hand, in one of two ways. Your settings, API keys and data stay.
+    Versions up to and including {LAST_OLD_UPDATER_VERSION} ask for updates
+    at the repository's old address. Since the move that address only answers
+    with a pointer to the new one, which those versions do not follow, so the
+    app will not offer you an update by itself. Update once by hand, in one of
+    two ways. Your settings, API keys and data stay.
   </p>
 
   <h3>Run the install command again</h3>
@@ -83,11 +88,12 @@ import { FORMER_NAME, LAST_OLD_UPDATER_VERSION } from "@/lib/rename";
   <p>Windows, in PowerShell:</p>
   <pre><code>{INSTALL_COMMANDS.windows}</code></pre>
 
-  <h3>Or download the current installer</h3>
+  <h3>Or download a newer installer</h3>
   <p>
-    If you installed the desktop app from a download, get the current
-    installer for your system from the <a href={RELEASES}>release page</a> and
-    install it.
+    If you installed the desktop app from a download, get the installer for
+    your system from the <a href={RELEASES}>release page</a> and install it. It
+    has to be a release newer than {LAST_OLD_UPDATER_VERSION}:
+    {LAST_OLD_UPDATER_VERSION} itself still looks at the old address.
   </p>
 
   <h2>Questions</h2>
