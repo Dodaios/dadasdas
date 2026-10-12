@@ -1,0 +1,44 @@
+---
+/**
+ * The page for an address that does not exist.
+ *
+ * Astro builds this file to `dist/404.html`, and GitHub Pages serves that file
+ * with a 404 status for every unknown path. Without it the host answers with
+ * its own bare error page, which carries none of the site and no way back.
+ *
+ * It names the rename on purpose. The project was called Personal Jarvis until
+ * October 2026, and a link somebody saved or shared before then is the most
+ * likely reason to land here.
+ *
+ * It borrows the legal pages' frame: one bounded column of prose with the
+ * site's chrome and footer, and no dateline, because there is nothing to date.
+ */
+import LegalPage from "@/components/LegalPage.astro";
+import { REPO } from "@/lib/install";
+import { DOCS_URL, INSTALL_ID } from "@/lib/nav";
+import { FORMER_NAME, RENAMED_HREF } from "@/lib/rename";
+---
+
+<LegalPage
+  title="Page not found — Dodaios"
+  description="There is no page at this address on dodaios.ai."
+  heading="There is no page here"
+  dateline={false}
+>
+  <p>
+    Nothing lives at this address. It may be mistyped, or it may be a link
+    from before {FORMER_NAME} became Dodaios.
+  </p>
+
+  <h2>Where to go instead</h2>
+  <ul>
+    <li><a href="/">The front page</a></li>
+    <li><a href={`/#${INSTALL_ID}`}>How to install Dodaios</a></li>
+    <li><a href={DOCS_URL}>The documentation</a></li>
+    <li><a href="/blog/">The blog</a></li>
+    <li><a href={REPO}>The source code on GitHub</a></li>
+    <li>
+      <a href={RENAMED_HREF}>What changed with the new name, and how to update an old install</a>
+    </li>
+  </ul>
+</LegalPage>

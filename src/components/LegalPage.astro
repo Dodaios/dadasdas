@@ -16,9 +16,20 @@ interface Props {
   title: string;
   description: string;
   heading: string;
+  /**
+   * The line under the heading. The legal texts share one review date, which
+   * is the default; a page that is not a legal text and borrows this frame
+   * for its typography states its own date instead, or `false` for none.
+   */
+  dateline?: string | false;
 }
 
-const { title, description, heading } = Astro.props;
+const {
+  title,
+  description,
+  heading,
+  dateline = `Last updated ${LEGAL_UPDATED}`,
+} = Astro.props;
 ---
 
 <Base title={title} description={description}>
@@ -26,7 +37,7 @@ const { title, description, heading } = Astro.props;
     <Container width="prose" class="section-inset">
       <article class="legal-doc">
         <h1>{heading}</h1>
-        <p class="legal-doc__updated">Last updated {LEGAL_UPDATED}</p>
+        {dateline && <p class="legal-doc__updated">{dateline}</p>}
         <slot />
       </article>
     </Container>
