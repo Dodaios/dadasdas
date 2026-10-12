@@ -1,9 +1,9 @@
-# Personal Jarvis
+# Dodaios
 
-> Personal Jarvis is a free, open-source (Apache 2.0) desktop app for Windows, macOS and Linux that turns your computer into an AI agent. You talk to it by chat or by voice; it can use the browser and desktop, run coding agents, call connected tools, and bring the result back to one workspace. It works with any single model provider key or with local models through Ollama.
+> Dodaios (called Personal Jarvis until October 2026) is a free, open-source (Apache 2.0) desktop app for Windows, macOS and Linux that turns your computer into an AI agent. You talk to it by chat or by voice; it can use the browser and desktop, run coding agents, call connected tools, and bring the result back to one workspace. It works with any single model provider key or with local models through Ollama.
 
-- Source code, install commands and documentation: https://github.com/PersonalJarvis/PersonalJarvis
-- Releases: https://github.com/PersonalJarvis/PersonalJarvis/releases
+- Source code, install commands and documentation: https://github.com/Dodaios/Dodaios
+- Releases: https://github.com/Dodaios/Dodaios/releases
 - Python package: https://pypi.org/project/personal-jarvis/
 
 ## What it does
@@ -20,15 +20,15 @@
 
 ## Install
 
-- Windows (PowerShell): `irm https://raw.githubusercontent.com/PersonalJarvis/PersonalJarvis/main/install/install.ps1 | iex`
-- macOS and Linux: `curl -fsSL https://raw.githubusercontent.com/PersonalJarvis/PersonalJarvis/main/install/install.sh | bash`
+- Windows (PowerShell): `irm https://raw.githubusercontent.com/Dodaios/Dodaios/main/install/install.ps1 | iex`
+- macOS and Linux: `curl -fsSL https://raw.githubusercontent.com/Dodaios/Dodaios/main/install/install.sh | bash`
 
 ## Site
 
-- [Home](https://personaljarvis.ai/)
-- [Supported coding CLIs](https://personaljarvis.ai/clis/)
-- [Plugins](https://personaljarvis.ai/plugins/)
-- [Skills](https://personaljarvis.ai/skills/)
-- [Blog](https://personaljarvis.ai/blog/)
-- [Jarvis Verse launch post](https://personaljarvis.ai/blog/jarvis-verse/)
-- [Marketplace](https://personaljarvis.ai/marketplace/)
+- [Home](https://dodaios.ai/)
+- [Supported coding CLIs](https://dodaios.ai/clis/)
+- [Plugins](https://dodaios.ai/plugins/)
+- [Skills](https://dodaios.ai/skills/)
+- [Blog](https://dodaios.ai/blog/)
+- [Dodaios Verse launch post](https://dodaios.ai/blog/jarvis-verse/)
+- [The rename from Personal Jarvis, and how to update an old install](https://dodaios.ai/renamed/)

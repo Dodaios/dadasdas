@@ -28,7 +28,7 @@ export const CANVAS_WIDTH = 1440;
 export const FEATURE_CANVAS_HEIGHT = 1340;
 export const WINDOW_CHROME_HEIGHT = 76;
 
-export function WindowChrome({ title = "Personal Jarvis" }: { title?: string }) {
+export function WindowChrome({ title = "Dodaios" }: { title?: string }) {
   return (
     <div
       style={{

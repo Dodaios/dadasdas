@@ -355,7 +355,7 @@ function Sidebar({
                   </button>
                 </li>
                 <NavRow icon={AgentsIcon as IconComponent} label="Agents" />
-                <NavRow icon={SpeechIcon as IconComponent} label="Jarvis Voice" />
+                <NavRow icon={SpeechIcon as IconComponent} label="Dodaios Voice" />
               </ul>
               <ul className="space-y-px">
                 <NavRow icon={ArtifactsIcon as IconComponent} label="Artifacts" />

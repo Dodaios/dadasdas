@@ -24,6 +24,7 @@
 import Container from "@/components/Container.astro";
 import { REPO } from "@/lib/install";
 import { CODE_SIGNING_HREF, IMPRINT_HREF, PRIVACY_HREF } from "@/lib/legal";
+import { FORMER_NAME, RENAMED_HREF } from "@/lib/rename";
 import { SOCIAL_STATS, type SocialId } from "@/lib/socialCounts";
 
 /**
@@ -31,7 +32,7 @@ import { SOCIAL_STATS, type SocialId } from "@/lib/socialCounts";
  *
  * The handles themselves are NOT written here. `socialCounts.ts` is the one
  * place the site states which account is which — the X account is the
- * project's @PersonalJarvis and not the maintainer's personal one, so a
+ * project's @dodaios and not the maintainer's personal one, so a
  * handle typed from memory points at the wrong profile. This map only turns
  * its ids into the words a reader recognises, which is the one thing that
  * file has no opinion about.
@@ -61,12 +62,16 @@ const groups = [
       { label: "Source", href: REPO },
       // The docs live in the repository; this site has no /docs route yet.
       { label: "Docs", href: `${REPO}/tree/main/docs` },
-      // The blog is its own repository (PersonalJarvis/blog), which GitHub
+      // The blog is its own repository (Dodaios/blog), which GitHub
       // Pages publishes under this domain at /blog/, so it opens in the same
       // tab. This site must never ship a /blog route of its own: the blog's
       // Pages site takes that path and would hide it.
       { label: "Blog", href: "/blog/" },
       { label: "Security", href: `${REPO}/blob/main/SECURITY.md` },
+      // The project was renamed in October 2026. The notice bar can be
+      // closed for good, so this is the link that stays for anyone who
+      // arrives with the old name and wants to know they are in the right place.
+      { label: `Formerly ${FORMER_NAME}`, href: RENAMED_HREF },
     ],
   },
   {
@@ -110,7 +115,7 @@ const year = new Date().getFullYear();
              makes. This is the column the reader lands in; the link columns
              beside it are what they came to click. -->
         <div class="legal-identity">
-          <p class="legal-mark">Personal Jarvis</p>
+          <p class="legal-mark">Dodaios</p>
 
           <div class="legal-fine">
             {/*
@@ -172,7 +177,7 @@ const year = new Date().getFullYear();
       <!-- The last row: what holds, and under what. The hairline over it is
            the only line the footer draws. -->
       <div class="legal-baseline">
-        <p>&copy; {year} the Personal Jarvis contributors</p>
+        <p>&copy; {year} the Dodaios contributors</p>
         <p>Apache 2.0</p>
       </div>
     </div>

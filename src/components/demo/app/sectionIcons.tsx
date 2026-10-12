@@ -3,7 +3,7 @@
  * src/components/icons/sectionIcons.tsx. Do not edit by hand.
  *
  * ---
- * Jarvis's own section icons — the glyphs on the sidebar rows, the rail, the
+ * Dodaios's own section icons — the glyphs on the sidebar rows, the rail, the
  * deck and the quick switcher.
  *
  * Drawn for this app instead of picked from lucide's catalogue: the stock
@@ -96,7 +96,7 @@ export const VoiceIcon = defineIcon(
 
 /**
  * A head in profile speaking: the dictation section, where the user talks and
- * Jarvis writes. Kept apart from the waveform, which marks live voice mode.
+ * Dodaios writes. Kept apart from the waveform, which marks live voice mode.
  */
 export const SpeechIcon = defineIcon(
   "SpeechIcon",
@@ -401,7 +401,7 @@ export const PetsIcon = defineIcon(
   </>,
 );
 
-/** A shield with a check: what Jarvis may do on its own. */
+/** A shield with a check: what Dodaios may do on its own. */
 export const PermissionsIcon = defineIcon(
   "PermissionsIcon",
   <>

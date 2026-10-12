@@ -56,7 +56,7 @@ export function AppFrame({
     <>
       <iframe
         ref={ref}
-        title="Personal Jarvis"
+        title="Dodaios"
         aria-hidden="true"
         tabIndex={-1}
         style={{ display: "block", width, height, border: 0, background: "transparent" }}

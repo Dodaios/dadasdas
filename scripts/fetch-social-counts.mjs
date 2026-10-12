@@ -87,11 +87,11 @@ const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
   "(KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36";
 
-const YOUTUBE_HANDLE = "PersonalJarvis";
+const YOUTUBE_HANDLE = "Dodaios";
 /** Resolved once from the channel page; the Data API wants an id, not a handle. */
 const YOUTUBE_CHANNEL_ID = "UC5fU9pU6jeGchEbriUwQBBg";
 /**
- * The X account is @PersonalJarvis, not the maintainer's own @Ruben_Luetke.
+ * The X account is @dodaios, not the maintainer's own @Ruben_Luetke.
  *
  * Maintainer directive of 2026-08-29, which supersedes the 2026-07-18 one
  * that sent every X link to the personal profile. The project-named account
@@ -99,8 +99,8 @@ const YOUTUBE_CHANNEL_ID = "UC5fU9pU6jeGchEbriUwQBBg";
  * person. The count read here is that account's own, so it is the smaller of
  * the two figures on purpose — never carry the personal one over.
  */
-const X_HANDLE = "PersonalJarvis";
-const GITHUB_REPO = "PersonalJarvis/PersonalJarvis";
+const X_HANDLE = "dodaios";
+const GITHUB_REPO = "Dodaios/Dodaios";
 const DISCORD_INVITE = "x7USduHxbc";
 
 /* --------------------------------------------------------------- helpers */

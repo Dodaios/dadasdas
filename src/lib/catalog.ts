@@ -91,7 +91,7 @@ export const LONGEVITY_WORDING: Record<Longevity, Wording> = {
 export const ROUTE_WORDING: Record<PluginRoute, Wording> = {
   mcp: {
     label: "Hosted server",
-    hint: "The service publishes its own tool server and Jarvis calls it. Nothing to install.",
+    hint: "The service publishes its own tool server and Dodaios calls it. Nothing to install.",
   },
   native: {
     label: "Built in",
@@ -99,7 +99,7 @@ export const ROUTE_WORDING: Record<PluginRoute, Wording> = {
   },
   channel: {
     label: "A way in",
-    hint: "This one runs the other way round: you message your own bot and Jarvis answers there.",
+    hint: "This one runs the other way round: you message your own bot and your assistant answers there.",
   },
 };
 
@@ -153,7 +153,7 @@ export const RISK_WORDING: Record<RiskTier, Wording> = {
 export const CLI_AUTH_WORDING: Record<CliAuth, Wording> = {
   oauth_cli: {
     label: "The tool's own login",
-    hint: "Jarvis runs the vendor's own sign-in command and never sees the credentials.",
+    hint: "Dodaios runs the vendor's own sign-in command and never sees the credentials.",
   },
   api_key: {
     label: "API key",

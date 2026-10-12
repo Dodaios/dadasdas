@@ -22,12 +22,12 @@ interface Props {
   class?: string;
 }
 
-const { title = "Personal Jarvis", class: className = "" } = Astro.props;
+const { title = "Dodaios", class: className = "" } = Astro.props;
 ---
 
 <div class={`app-window ${className}`.trim()}>
   {/*
-    The bar is chrome, not content: a screen reader announcing "Personal Jarvis,
+    The bar is chrome, not content: a screen reader announcing "Dodaios,
     three buttons" before every list would be reading out the picture frame. The
     window's content is the slot, and that is not hidden.
   */}

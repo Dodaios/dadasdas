@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-12T13:31:30.079Z",
+  "generatedAt": "2026-10-12T16:23:44.775Z",
   "platforms": {
     "youtube": {
       "value": 40,
-      "readAt": "2026-10-12T13:31:30.079Z",
+      "readAt": "2026-10-12T16:23:44.775Z",
       "source": "youtube-channel-page",
-      "account": "@PersonalJarvis"
+      "account": "@Dodaios"
     },
     "x": {
       "value": 11,
@@ -14,14 +14,14 @@
       "account": "@PersonalJarvis"
     },
     "github": {
-      "value": 185,
-      "readAt": "2026-10-12T13:31:30.079Z",
+      "value": 186,
+      "readAt": "2026-10-12T16:23:44.775Z",
       "source": "github-rest-api",
-      "account": "PersonalJarvis/PersonalJarvis"
+      "account": "Dodaios/Dodaios"
     },
     "discord": {
-      "value": 27,
-      "readAt": "2026-10-12T13:31:30.079Z",
+      "value": 28,
+      "readAt": "2026-10-12T16:23:44.775Z",
       "source": "discord-invite-api",
       "account": "discord.gg/x7USduHxbc"
     }

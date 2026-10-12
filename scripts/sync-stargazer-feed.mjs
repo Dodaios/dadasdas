@@ -8,7 +8,7 @@ const response = await fetch(STARGAZER_FEED, {
 });
 if (!response.ok) throw new Error(`Stargazer feed: HTTP ${response.status}. Check the app repository's Stargazer map workflow.`);
 const next = await response.json();
-if (!isSnapshot(next, "PersonalJarvis/PersonalJarvis")) throw new Error("Invalid stargazer feed; keeping the previous map.");
+if (!isSnapshot(next, "Dodaios/Dodaios")) throw new Error("Invalid stargazer feed; keeping the previous map.");
 if (Date.now() - Date.parse(next.generatedAt) > 24 * 60 * 60 * 1000) {
   throw new Error("Stargazer feed is over a day old. Check the app repository's Stargazer map workflow.");
 }

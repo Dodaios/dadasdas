@@ -6,7 +6,7 @@
  * needs no second asset for dark mode.
  *
  * Not part of `marks.ts`. That list is the connection strip — the services
- * Jarvis itself talks to — and YouTube is not one of them; this mark labels a
+ * Dodaios itself talks to — and YouTube is not one of them; this mark labels a
  * channel card in the "Built in public" section instead.
  */
 export function YouTubeMark({ className }: { className?: string }) {

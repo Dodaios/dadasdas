@@ -23,12 +23,12 @@ interface Site {
 const SITES: Readonly<Record<Preview, Site>> = {
   newtab: { tab: "New Tab", url: "google.com", path: [[50, 34, true], [36, 70, false], [62, 70, true]] },
   results: { tab: "install page drop off - Google Search", url: "google.com/search?q=install+page+drop+off", path: [[34, 30, true], [30, 56, false], [30, 80, true]] },
-  github: { tab: "CHANGELOG.md · PersonalJarvis", url: "github.com/PersonalJarvis/PersonalJarvis/blob/main/CHANGELOG.md", path: [[22, 14, false], [40, 56, false], [30, 80, true]] },
+  github: { tab: "CHANGELOG.md · Dodaios", url: "github.com/Dodaios/Dodaios/blob/main/CHANGELOG.md", path: [[22, 14, false], [40, 56, false], [30, 80, true]] },
   stock: { tab: "Dark desk setup videos", url: "pexels.com/search/videos/dark desk setup", path: [[20, 46, false], [52, 46, true], [84, 78, false]] },
   compose: { tab: "Home / X", url: "x.com/compose/post", path: [[40, 30, false], [58, 60, false], [86, 86, true]] },
-  landing: { tab: "Personal Jarvis — variant B", url: "personaljarvis.ai/?variant=b", path: [[30, 40, false], [30, 66, true], [70, 20, false]] },
+  landing: { tab: "Dodaios — variant B", url: "dodaios.ai/?variant=b", path: [[30, 40, false], [30, 66, true], [70, 20, false]] },
   mail: { tab: "Inbox (4) - Gmail", url: "mail.google.com/mail/u/0/", path: [[60, 22, true], [60, 38, false], [60, 54, true]] },
-  pull: { tab: "Add jitter to reconnect · Pull Request 412", url: "github.com/PersonalJarvis/PersonalJarvis/pull/412", path: [[30, 50, false], [70, 60, false], [82, 88, true]] },
+  pull: { tab: "Add jitter to reconnect · Pull Request 412", url: "github.com/Dodaios/Dodaios/pull/412", path: [[30, 50, false], [70, 60, false], [82, 88, true]] },
   forum: { tab: "r/LocalLLaMA", url: "reddit.com/r/LocalLLaMA/top/?t=week", path: [[50, 26, true], [50, 52, false], [50, 78, true]] },
 };
 
@@ -67,7 +67,7 @@ function Site({ kind, step }: { kind: Preview; step: number }) {
     case "github":
       return (
         <div className="ws-github">
-          <div className="ws-gh__repo"><span className="ws-gh__book" /> PersonalJarvis / <b>PersonalJarvis</b></div>
+          <div className="ws-gh__repo"><span className="ws-gh__book" /> Dodaios / <b>Dodaios</b></div>
           <div className="ws-gh__nav"><b>Code</b><span>Issues</span><span>Pull requests</span><span>Actions</span></div>
           <div className="ws-gh__file">
             <div className="ws-gh__filehead">CHANGELOG.md</div>
@@ -105,7 +105,7 @@ function Site({ kind, step }: { kind: Preview; step: number }) {
             <div className="ws-x__compose">
               <span className="ws-x__avatar" />
               <div>
-                <p><b>Your agents now work as a team.</b> Give Jarvis one goal — it hands out the work and only comes back when something needs you.</p>
+                <p><b>Your agents now work as a team.</b> Give Dodaios one goal — it hands out the work and only comes back when something needs you.</p>
                 <div className="ws-x__media">▶ launch-clip.mp4</div>
                 <div className="ws-x__bar"><span>Scheduled · Tue 16:00</span><b data-hot={step === 2 ? "true" : undefined}>Schedule</b></div>
               </div>
@@ -116,7 +116,7 @@ function Site({ kind, step }: { kind: Preview; step: number }) {
     case "landing":
       return (
         <div className="ws-landing">
-          <div className="ws-landing__nav"><b>Personal Jarvis</b><span>Plugins</span><span>Agents</span><i>Download</i></div>
+          <div className="ws-landing__nav"><b>Dodaios</b><span>Plugins</span><span>Agents</span><i>Download</i></div>
           <b className="ws-landing__h">A voice assistant that runs on your machine.</b>
           <span className="ws-landing__sub">Speak to your computer. It answers, types and uses your apps.</span>
           <span className="ws-landing__cmd" data-hot={step >= 1 ? "true" : undefined}>irm https://…/install.ps1 | iex <em>Copy</em></span>
@@ -151,7 +151,7 @@ function Site({ kind, step }: { kind: Preview; step: number }) {
     case "pull":
       return (
         <div className="ws-github">
-          <div className="ws-gh__repo"><span className="ws-gh__book" /> PersonalJarvis / <b>PersonalJarvis</b></div>
+          <div className="ws-gh__repo"><span className="ws-gh__book" /> Dodaios / <b>Dodaios</b></div>
           <b className="ws-h1">Add jitter to reconnect <span className="ws-gh__num">412</span></b>
           <span className="ws-gh__meta"><i>Open</i> wants to merge 1 commit into main</span>
           <pre className="ws-gh__diff">

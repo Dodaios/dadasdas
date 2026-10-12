@@ -4,7 +4,7 @@ import { createStargazerFeed, isSnapshot, STARGAZER_FEED } from "../src/lib/star
 
 const place = { lat: 52.52, lon: 13.405, label: "Berlin", country: "Germany", count: 1 };
 const initial = {
-  repo: "PersonalJarvis/PersonalJarvis", count: 2, forks: 0, placed: 1, stated: 1,
+  repo: "Dodaios/Dodaios", count: 2, forks: 0, placed: 1, stated: 1,
   generatedAt: "2026-09-01T10:00:00Z", clusters: [place],
 };
 const newer = (changes = {}) => ({ ...initial, generatedAt: "2026-09-01T11:00:00Z", ...changes });

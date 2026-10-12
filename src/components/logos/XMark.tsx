@@ -13,7 +13,7 @@
  * shape. This is the one to use for anything pointing at x.com.
  *
  * Not part of `marks.ts` either, for the same reason YouTube is not: that list
- * is the connection strip — the services Jarvis itself talks to — and X is a
+ * is the connection strip — the services Dodaios itself talks to — and X is a
  * place the project posts, not a service the app integrates with.
  *
  * The two subpaths are the source's own. The counter of the glyph is cut by

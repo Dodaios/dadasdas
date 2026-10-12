@@ -180,7 +180,7 @@ export const FRAMES: Frame[] = [
     duration: 4200,
     layout: "catalog",
     caption:
-      "The whole catalog of command-line tools Jarvis can drive: twenty-two of them, three connected here.",
+      "The whole catalog of command-line tools Dodaios can drive: twenty-two of them, three connected here.",
   },
   {
     duration: 4200,

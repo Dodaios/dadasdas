@@ -171,7 +171,7 @@ export const downTheRail = (t: number): number => (t * RAIL) / TOTAL;
  * gives that section a running length of `track - viewport`, which at the
  * window where it just stopped pinning is a dozen pixels: the square crosses
  * the whole section in one wheel notch and sits in the corner for the rest of
- * it. That was the "it does not work at all in How to install Jarvis" the
+ * it. That was the "it does not work at all in How to install Dodaios" the
  * maintainer reported on 2026-08-29.
  */
 export interface TrackMeasure {

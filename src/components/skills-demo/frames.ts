@@ -44,7 +44,7 @@ export interface DemoSkill {
   triggers: TriggerKind[];
   /** Rendered as the app renders it: a short US date. */
   updated: string;
-  /** "Personal Jarvis" for a built-in, "You" for one you wrote. */
+  /** "Dodaios" for a built-in, "You" for one you wrote. */
   author: string;
   on: boolean;
   /** The search's own explanation of why this row matched. */
@@ -59,7 +59,7 @@ const SHELF: DemoSkill[] = [
     name: "deep-work-mode",
     triggers: ["hotkey", "voice"],
     updated: "8/27/26",
-    author: "Personal Jarvis",
+    author: "Dodaios",
     on: true,
     card: {
       byline: "Built-in",
@@ -85,7 +85,7 @@ const SHELF: DemoSkill[] = [
     name: "memory-save",
     triggers: [],
     updated: "8/27/26",
-    author: "Personal Jarvis",
+    author: "Dodaios",
     on: true,
     card: {
       byline: "Built-in",
@@ -106,7 +106,7 @@ const SHELF: DemoSkill[] = [
     name: "morning-routine",
     triggers: ["voice", "voice", "cron"],
     updated: "8/27/26",
-    author: "Personal Jarvis",
+    author: "Dodaios",
     on: true,
     card: {
       byline: "Built-in",
@@ -141,7 +141,7 @@ const SHELF: DemoSkill[] = [
     // fabrication the verify pass caught.
     triggers: ["voice", "voice"],
     updated: "8/22/26",
-    author: "Personal Jarvis",
+    author: "Dodaios",
     on: true,
     card: {
       byline: "Built-in",
@@ -190,7 +190,7 @@ const HITS: DemoSkill[] = [
     name: "plugin-supabase",
     triggers: ["voice"],
     updated: "8/22/26",
-    author: "Personal Jarvis",
+    author: "Dodaios",
     on: true,
     reason: "trigram: summary",
     card: {
@@ -212,7 +212,7 @@ const HITS: DemoSkill[] = [
     name: "plugin-airtable",
     triggers: ["voice"],
     updated: "8/22/26",
-    author: "Personal Jarvis",
+    author: "Dodaios",
     on: true,
     reason: "trigram: summary",
     card: {

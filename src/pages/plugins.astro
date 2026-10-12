@@ -49,13 +49,13 @@ const authGroups = groupBy(PLUGINS, (plugin) => plugin.auth);
 ---
 
 <Base
-  title="Every plugin — Personal Jarvis"
-  description="The twenty-four services Personal Jarvis connects to, how each one signs in, and how long that sign-in lasts."
+  title="Every plugin — Dodaios"
+  description="The twenty-four services Dodaios connects to, how each one signs in, and how long that sign-in lasts."
 >
   <DetailHead
     eyebrow="Plugins"
     title="Every service it can reach, and what signing in costs you."
-    lede="A plugin is a connection to something you already use. Sign in once and Jarvis can read your mail, find a file or start the music — by voice, in the same sentence as everything else."
+    lede="A plugin is a connection to something you already use. Sign in once and Dodaios can read your mail, find a file or start the music — by voice, in the same sentence as everything else."
     facts={[
       { value: String(PLUGINS.length), label: "plugins" },
       { value: String(byCategory.size), label: "categories" },
@@ -168,7 +168,7 @@ const authGroups = groupBy(PLUGINS, (plugin) => plugin.auth);
 
         <h2 class="detail-h2">Three ways in, and none of them is a password.</h2>
         <p class="detail-lede">
-          Jarvis never asks for the password to a service. Every connection is
+          Dodaios never asks for the password to a service. Every connection is
           either a token you create with the permissions it names, or a sign-in
           that happens on the service's own page and comes back to the app on
           your machine. What is stored is kept in your operating system's
@@ -223,7 +223,7 @@ const authGroups = groupBy(PLUGINS, (plugin) => plugin.auth);
         <p class="detail-lede">
           What happens after you connect differs, and it is worth knowing which
           one you are getting. Nothing about the way you ask changes: you say
-          the sentence, and Jarvis picks the route.
+          the sentence, and Dodaios picks the route.
         </p>
 
         <dl class="fact-list">

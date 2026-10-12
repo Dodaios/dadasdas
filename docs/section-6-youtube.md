@@ -17,7 +17,7 @@ Not their text, their numbers or their content — see [`design.md`](design.md)
 
 ## What it says
 
-Personal Jarvis is developed in public. Anyone who wants to know how it is
+Dodaios is developed in public. Anyone who wants to know how it is
 built can watch it being built — and can see, unrounded, how many people
 currently do.
 
@@ -475,7 +475,7 @@ What did **not** change, and is still binding:
   the profile header and `social-counts.json` says exactly that
   (`"source": "profile-header-read-by-hand"`) rather than dressing it up as an
   API read.
-- **The account is the project's.** X is `@PersonalJarvis`, not the
+- **The account is the project's.** X is `@dodaios`, not the
   maintainer's personal `@Ruben_Luetke` — maintainer directive of 2026-08-29,
   superseding the 2026-07-18 one that pointed every X link at the personal
   profile. The project-named account is live and verified, so this cell counts

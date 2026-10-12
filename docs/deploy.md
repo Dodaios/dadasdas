@@ -1,16 +1,25 @@
 # How the site is published
 
-The site is a static build on **GitHub Pages**, served from
-`PersonalJarvis/personaljarvis.github.io` at **<https://personaljarvis.ai>**.
+The site is a static build on **GitHub Pages**, built for
+**<https://dodaios.ai>** (`site` in `astro.config.mjs`). The project was called
+Personal Jarvis until October 2026 and the site lived at `personaljarvis.ai`;
+see "Moving to dodaios.ai" at the end of this file.
 
 There is nothing to run by hand. A push to `main` builds and publishes.
 
 ## The repository name is load-bearing
 
 An organisation's Pages site is served at the root only from a repository named
-`<org>.github.io`. A repository called `website` would be served from
-`/website/`, and every absolute path in the build — which is all of them, since
-`astro.config.mjs` sets no `base` — would 404. The name is not cosmetic.
+`<org>.github.io` — for this organisation, `dodaios.github.io`. A repository
+called `website` would be served from `/website/`, and every absolute path in
+the build — which is all of them, since `astro.config.mjs` sets no `base` —
+would 404. The name is not cosmetic.
+
+It also decides where the blog lives. The blog is a project repository
+(`Dodaios/blog`, built with `base: "/blog"`), and GitHub serves a project
+repository under the organisation site's custom domain only while a repository
+named `<org>.github.io` holds that domain. Without it the blog answers only at
+`dodaios.github.io/blog/`.
 
 ## The four workflows
 
@@ -65,7 +74,9 @@ scheduled refreshes to fail while the browser's star count kept increasing.
 `workers/token-broker/` is a Cloudflare Worker on `token.personaljarvis.ai`,
 not part of the Pages build. It adds the Google and Slack client secrets to
 the desktop app's token requests so the app never ships them, and it is the
-https redirect target the Slack app registers.
+https redirect target the Slack app registers. Every installed copy of the app
+calls that host, so it keeps its old name: the rename to Dodaios does not move
+it, and nothing in that folder changes with the site's domain.
 A push does not deploy it; `wrangler deploy` from that folder does. Its
 README covers the rules, the secret and the live check.
 
@@ -77,3 +88,24 @@ and `public/CNAME` in the build so a deploy cannot reset the domain.
 Every record is **DNS-only**. Behind Cloudflare's proxy GitHub never sees the
 validation request and can never issue the certificate; the site then sits on
 "Certificate not yet created" with no error to explain it.
+
+## Moving to dodaios.ai
+
+The source builds for `https://dodaios.ai`: canonical URLs, the sitemap,
+`robots.txt` and `llms.txt` all name it. `public/CNAME` is the one line that
+decides which domain GitHub Pages actually serves, and it is flipped last, in
+its own change, because a deploy with the new name in it takes the old domain
+off the site at once.
+
+The order that keeps both addresses answering:
+
+1. Name this repository `dodaios.github.io`, so it is the organisation site and
+   the blog is served under its domain again.
+2. Point the `dodaios.ai` apex at GitHub's Pages addresses and `www` at
+   `dodaios.github.io`, both DNS-only (see "DNS" above).
+3. Change `public/CNAME` to `dodaios.ai`, merge, and wait for the certificate.
+4. Redirect `personaljarvis.ai` to `dodaios.ai` path for path, so old links and
+   old link previews keep working. `token.personaljarvis.ai` is not part of
+   that redirect and must keep resolving to the Worker.
+5. Move the published contact address in `src/lib/legal.ts` once mail for the
+   new domain is routed.

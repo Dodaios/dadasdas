@@ -1,0 +1,32 @@
+---
+/**
+ * Decides, before the body is parsed, whether the rename notice is shown.
+ *
+ * IN THE HEAD FOR THE SAME REASON `OsProbe` IS. The notice is a fixed bar that
+ * a returning visitor has already closed. If the decision were made by a
+ * script at the end of the body, the bar would be painted and then removed on
+ * every page they open. Writing one attribute on <html> here means the first
+ * painted frame is already the right one.
+ *
+ * "on" means a script ran and the bar may offer its close button; "off" means
+ * it was closed before. With scripting disabled neither is set: the bar shows,
+ * without a button that could not work.
+ *
+ * Storage can throw — a private window, blocked site data — and a notice that
+ * cannot be remembered is still a notice, so a failed read counts as "not
+ * dismissed" and nothing else happens.
+ */
+import { NOTICE_ATTRIBUTE, NOTICE_STORAGE_KEY } from "@/lib/rename";
+---
+
+<script is:inline define:vars={{ attribute: NOTICE_ATTRIBUTE, key: NOTICE_STORAGE_KEY }}>
+  (function () {
+    var dismissed = false;
+    try {
+      dismissed = window.localStorage.getItem(key) !== null;
+    } catch (error) {
+      dismissed = false;
+    }
+    document.documentElement.setAttribute(attribute, dismissed ? "off" : "on");
+  })();
+</script>

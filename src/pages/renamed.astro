@@ -1,0 +1,105 @@
+---
+/**
+ * "Personal Jarvis is now Dodaios" — what the notice bar links to.
+ *
+ * Two jobs. It tells someone who arrived with the old name that they are in
+ * the right place, and it tells someone with an old install the one thing
+ * they have to do by hand: the app looked for updates at the repository's old
+ * address, so releases up to `LAST_OLD_UPDATER_VERSION` do not see newer ones.
+ *
+ * Every statement is checkable. The update check of 3.1.1 is
+ * `_fetch_latest_release` in the app's `jarvis/ui/web/update_routes.py`: it
+ * asks api.github.com for the latest release under the old repository name,
+ * GitHub answers 301 since the move, and the check treats anything but 200 as
+ * "no update". The install lines come from
+ * `src/lib/install.ts`, which holds them verbatim from the app's README, and
+ * the README is also the source for "run it again and it updates your
+ * existing installation". Nothing here promises a date or a version that does
+ * not exist yet.
+ *
+ * It borrows the legal pages' frame for its typography: one bounded column of
+ * prose with the site's chrome and footer.
+ *
+ * An inline element or expression never starts a source line here: the build's HTML
+ * compression drops the line break in front of one, and the space with it.
+ */
+import LegalPage from "@/components/LegalPage.astro";
+import { INSTALL_COMMANDS, RELEASES, REPO } from "@/lib/install";
+import { FORMER_NAME, LAST_OLD_UPDATER_VERSION } from "@/lib/rename";
+---
+
+<LegalPage
+  title={`${FORMER_NAME} is now Dodaios — Dodaios`}
+  description={`${FORMER_NAME} has a new name, Dodaios, and a new address. Same project and team. If you installed version ${LAST_OLD_UPDATER_VERSION} or older, update once by hand.`}
+  heading={`${FORMER_NAME} is now Dodaios`}
+  dateline="October 2026"
+>
+  <p>
+    {FORMER_NAME} has a new name: <strong>Dodaios</strong>. It is the same
+    project, built by the same team. Only the name and the addresses changed.
+  </p>
+
+  <h2>What changed</h2>
+  <ul>
+    <li>The name. {FORMER_NAME} is now Dodaios.</li>
+    <li>The website. It is now <a href="/">dodaios.ai</a>.</li>
+    <li>
+      The source code. It is now at <a href={REPO}>github.com/Dodaios/Dodaios</a>.
+      Links to the old repository on GitHub redirect there.
+    </li>
+    <li>The logo. It is now a small hooded figure.</li>
+  </ul>
+
+  <h2>What did not change</h2>
+  <ul>
+    <li>The app and what it does.</li>
+    <li>
+      The licence. Dodaios is free and open source under
+      the <a href={`${REPO}/blob/main/LICENSE`}>Apache License 2.0</a>.
+    </li>
+    <li>
+      Your settings, API keys and data. They stay on your computer, where
+      they were.
+    </li>
+    <li>
+      A few names you type or see on your disk. The command is
+      still <code>jarvis</code>, the settings file is still <code>jarvis.toml</code>,
+      the Python package is still <code>personal-jarvis</code>, and the
+      installer files still start with <code>PersonalJarvis</code>. They all
+      work as they are.
+    </li>
+  </ul>
+
+  <h2 id="update">If you already have it installed: update once</h2>
+  <p>
+    Versions up to and including {LAST_OLD_UPDATER_VERSION} ask for updates
+    at the repository's old address. Since the move that address only answers
+    with a pointer to the new one, which those versions do not follow, so the
+    app will not offer you an update by itself. Update once by hand, in one of
+    two ways. Your settings, API keys and data stay.
+  </p>
+
+  <h3>Run the install command again</h3>
+  <p>
+    The installer notices the existing installation and updates it in place.
+  </p>
+  <p>macOS and Linux, in a terminal:</p>
+  <pre><code>{INSTALL_COMMANDS.unix}</code></pre>
+  <p>Windows, in PowerShell:</p>
+  <pre><code>{INSTALL_COMMANDS.windows}</code></pre>
+
+  <h3>Or download a newer installer</h3>
+  <p>
+    If you installed the desktop app from a download, get the installer for
+    your system from the <a href={RELEASES}>release page</a> and install it. It
+    has to be a release newer than {LAST_OLD_UPDATER_VERSION}, because that
+    version itself still looks at the old address.
+  </p>
+
+  <h2>Questions</h2>
+  <p>
+    If something does not work after the update, open an issue in
+    the <a href={`${REPO}/issues`}>repository</a> or ask
+    on <a href="https://discord.gg/x7USduHxbc">Discord</a>.
+  </p>
+</LegalPage>

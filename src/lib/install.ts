@@ -14,9 +14,9 @@
  * agree, and that is a property of the installer, not something to hide.
  */
 
-const RAW = "https://raw.githubusercontent.com/PersonalJarvis/PersonalJarvis/main";
+const RAW = "https://raw.githubusercontent.com/Dodaios/Dodaios/main";
 
-export const REPO = "https://github.com/PersonalJarvis/PersonalJarvis";
+export const REPO = "https://github.com/Dodaios/Dodaios";
 
 export const INSTALL_COMMANDS = {
   /** PowerShell. */

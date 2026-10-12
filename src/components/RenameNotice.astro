@@ -1,0 +1,174 @@
+---
+/**
+ * "Personal Jarvis is now Dodaios" — one slim bar on every page.
+ *
+ * AT THE BOTTOM, AND FIXED, BECAUSE THE TOP IS NOT FREE. The nav is a fixed
+ * layer whose height every section's arithmetic is built on (`--nav-height` in
+ * layout.css: the scroll snap, the full-height sections, the section marker).
+ * A bar above it would have to move all of that, and closing it would move it
+ * all back — a layout shift on the one click the bar asks for. A fixed bar on
+ * the bottom edge displaces nothing: showing it and closing it change no
+ * element's position.
+ *
+ * It is not rendered on the page it links to.
+ *
+ * State lives on <html> (`RenameProbe.astro` writes it before first paint):
+ * "off" hides the bar; "on" reveals the close button, which only exists for a
+ * browser that can run it.
+ *
+ * TEMPORARY — see src/lib/rename.ts for what to delete and when.
+ */
+import Container from "@/components/Container.astro";
+import {
+  FORMER_NAME,
+  NOTICE_ATTRIBUTE,
+  NOTICE_STORAGE_KEY,
+  RENAMED_HREF,
+} from "@/lib/rename";
+
+const onRenamedPage = Astro.url.pathname.replace(/\/$/, "") === RENAMED_HREF;
+---
+
+{
+  !onRenamedPage && (
+    <aside class="rename-notice" aria-label="Project renamed" data-rename-notice>
+      <Container width="content" class="rename-notice__row">
+        <p class="rename-notice__text">
+          <span class="rename-notice__lead">{FORMER_NAME} is now Dodaios.</span>
+          <a class="rename-notice__link" href={RENAMED_HREF}>
+            What changed, and how to update
+          </a>
+        </p>
+        <button
+          type="button"
+          class="rename-notice__close"
+          aria-label="Dismiss this notice"
+          data-rename-dismiss
+        >
+          <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+            <path
+              d="M3.5 3.5l9 9m0-9l-9 9"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </Container>
+    </aside>
+  )
+}
+
+<script is:inline define:vars={{ attribute: NOTICE_ATTRIBUTE, key: NOTICE_STORAGE_KEY }}>
+  (function () {
+    var button = document.querySelector("[data-rename-dismiss]");
+    if (!button) return;
+    button.addEventListener("click", function () {
+      document.documentElement.setAttribute(attribute, "off");
+      try {
+        window.localStorage.setItem(key, new Date().toISOString());
+      } catch (error) {
+        /* Storage is unavailable (private window, blocked site data). The bar
+           is closed for this page view and returns on the next one, which is
+           the honest result of having nowhere to remember the click. */
+      }
+    });
+  })();
+</script>
+
+<style is:global>
+  .rename-notice {
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    /* Above the cards (20), below the nav (30): see layout.css. */
+    z-index: 25;
+    border-top: 1px solid var(--hairline-strong);
+    background: var(--canvas-soft);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    color: var(--body);
+    font-size: var(--text-caption);
+    line-height: 1.4;
+  }
+
+  :root[data-rename-notice="off"] .rename-notice {
+    display: none;
+  }
+
+  .rename-notice__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    min-height: 2.75rem;
+    padding-block: var(--space-xs);
+  }
+
+  .rename-notice__text {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: var(--space-sm);
+    row-gap: 0.125rem;
+  }
+
+  .rename-notice__lead {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .rename-notice__link {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .rename-notice__link:hover {
+    color: var(--ink-active);
+  }
+
+  /* Only a browser that ran the probe gets a button it can actually use. */
+  .rename-notice__close {
+    display: none;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-inline-end: -0.5rem;
+    border-radius: var(--radius-sm);
+    color: var(--body);
+    cursor: pointer;
+    transition: color 200ms ease;
+  }
+
+  :root[data-rename-notice="on"] .rename-notice__close {
+    display: inline-flex;
+  }
+
+  .rename-notice__close:hover {
+    color: var(--ink);
+  }
+
+  .rename-notice__close:focus-visible,
+  .rename-notice__link:focus-visible {
+    outline: 1px solid var(--ink);
+    outline-offset: 2px;
+  }
+
+  /*
+   * Room for the bar at the END of the document only, so the footer's last
+   * line is not left underneath it. Padding after the last element moves
+   * nothing that is on screen; it only lets the page scroll that much further.
+   */
+  :root:not([data-rename-notice="off"]) body:has(.rename-notice) {
+    padding-bottom: 2.75rem;
+  }
+
+  @media print {
+    .rename-notice {
+      display: none;
+    }
+  }
+</style>

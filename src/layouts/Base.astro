@@ -26,9 +26,17 @@
  * as its own parent is on screen, so the nav slid away at the hero's bottom
  * edge and the other ten sections had none at all. A nav that belongs to the
  * whole document has to be rendered by the thing that owns the whole document.
+ *
+ * RenameProbe and RenameNotice are the temporary pair that says the project
+ * used to be called Personal Jarvis: the probe in the head, so a visitor who
+ * closed the bar never sees it painted again, and the bar itself last in the
+ * body, where it is fixed to the bottom edge and displaces nothing. See
+ * src/lib/rename.ts for when both go.
  */
 import OsProbe from "@/components/OsProbe.astro";
 import PageChrome from "@/components/PageChrome.astro";
+import RenameNotice from "@/components/RenameNotice.astro";
+import RenameProbe from "@/components/RenameProbe.astro";
 import SectionMarker from "@/components/SectionMarker.astro";
 import SiteNav from "@/components/SiteNav.astro";
 import "@/styles/global.css";
@@ -50,9 +58,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
+    {/* The hooded figure. An SVG, so it follows a light or dark tab strip. */}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:site_name" content="Dodaios" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
     <meta name="generator" content={Astro.generator} />
     {/* A page's own head tags, such as a blog post's social image. */}
     <slot name="head" />
@@ -65,11 +77,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       the site.
     */}
     <OsProbe />
+    <RenameProbe />
   </head>
   <body>
     <PageChrome />
     <SectionMarker />
     <SiteNav />
     <slot />
+    <RenameNotice />
   </body>
 </html>

@@ -4,7 +4,7 @@
 > from the `Container`, colour and rhythm from the tokens. This file governs
 > only what is specific to the marks themselves.
 
-The strip shows every service Jarvis talks to — model providers, the
+The strip shows every service Dodaios talks to — model providers, the
 command-line tools it drives, and the plugins it connects. It is one section,
 `src/sections/LogoStrip.astro`, one component per mark in
 `src/components/logos/`, and one generated list in
@@ -118,7 +118,7 @@ them. Those are listed explicitly in the script.
 
 ### Trademark
 
-Every mark belongs to its owner. They identify the service Jarvis connects to —
+Every mark belongs to its owner. They identify the service Dodaios connects to —
 nominative use — and never imply endorsement, sponsorship, or affiliation. A
 permissive licence on an SVG settles the copyright in the drawing; it grants no
 trademark rights, and nothing here claims otherwise. If you own a mark shown
@@ -289,7 +289,7 @@ work from rather than an impression of them.
 ## Marks used outside the strip
 
 The table above is generated and covers the connection strip — the services
-Jarvis itself talks to. A mark can also be needed somewhere else on the site,
+Dodaios itself talks to. A mark can also be needed somewhere else on the site,
 and it is recorded here instead so the generated table stays generated.
 
 Rules 3 and 5 still apply: `currentColor`, no surviving hex, and no mark
@@ -303,7 +303,7 @@ without a provenance line.
 | Discord | Stat row in `BuiltInPublic.astro` | Already in the strip table above — the same `DiscordMark` component | CC0-1.0 |
 
 None of these four is in `marks.ts` for the strip's sake. That list is the
-services Jarvis itself connects to; these four are places the project
+services Dodaios itself connects to; these four are places the project
 publishes to, and GitHub and Discord happen to be both — they are in the strip
 because the app talks to them, and they appear in section 6 because the
 project has an account there. One component serves both uses.
@@ -318,7 +318,7 @@ because the failure is silent: the wrong mark renders perfectly.
 
 Listed rather than decided, per rule 6.
 
-- **The label copy** reads "Everything Jarvis connects". That wording was
+- **The label copy** reads "Everything Dodaios connects". That wording was
   given; the sentence around it has never been reviewed.
 - **Cal.com and AWS are wordmarks**, not icons, because that is what the app
   bundles. They read fine at this size but sit oddly beside forty-eight glyphs.

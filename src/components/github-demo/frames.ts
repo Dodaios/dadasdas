@@ -1,7 +1,7 @@
 /**
  * The repository walkthrough — the click path, and the repository it walks.
  *
- * Four beats of one visit to github.com/PersonalJarvis/PersonalJarvis: the
+ * Four beats of one visit to github.com/Dodaios/Dodaios: the
  * root, the application package, the installer directory, and the first lines
  * of the installer itself. It is the path a careful visitor actually takes
  * before running an install one-liner, which is the whole argument the section
