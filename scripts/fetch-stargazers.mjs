@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Where the people who starred Personal Jarvis are, as points on a globe.
+ * Where the people who starred Dodaios are, as points on a globe.
  *
  * ## Why this runs at build time and not in the browser
  *
@@ -41,7 +41,7 @@ import { geocode } from "./geocode.mjs";
 const ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
 const OUT = join(ROOT, "src", "data", "stargazers.json");
 
-const DEFAULT_REPO = "PersonalJarvis/PersonalJarvis";
+const DEFAULT_REPO = "Dodaios/Dodaios";
 const PAGE = 100;
 
 function repoArg() {
@@ -85,7 +85,7 @@ async function graphql(auth, variables) {
     headers: {
       authorization: `bearer ${auth}`,
       "content-type": "application/json",
-      "user-agent": "personal-jarvis-website-build",
+      "user-agent": "dodaios-website-build",
     },
     body: JSON.stringify({ query: QUERY, variables }),
   });
@@ -132,7 +132,7 @@ async function rest(auth, path) {
     headers: {
       authorization: `bearer ${auth}`,
       accept: "application/vnd.github+json",
-      "user-agent": "personal-jarvis-website-build",
+      "user-agent": "dodaios-website-build",
     },
   });
   if (!res.ok) {

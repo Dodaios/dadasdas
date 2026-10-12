@@ -1,6 +1,6 @@
 /** Anonymous, aggregate-only feed published by the repository receiving stars. */
 export const STARGAZER_FEED =
-  "https://raw.githubusercontent.com/PersonalJarvis/PersonalJarvis/stargazer-map/data/stargazers.json";
+  "https://raw.githubusercontent.com/Dodaios/Dodaios/stargazer-map/data/stargazers.json";
 
 export interface Cluster {
   lat: number;

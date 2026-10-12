@@ -24,19 +24,19 @@ import { REPO } from "@/lib/install";
 ---
 
 <LegalPage
-  title="Opening Personal Jarvis the first time on macOS — Personal Jarvis"
-  description="macOS blocks the Personal Jarvis disk image on first launch because it is not yet notarized by Apple. Here is what the warning means and how to open the app."
-  heading="Opening Personal Jarvis the first time on macOS"
+  title="Opening Dodaios the first time on macOS — Dodaios"
+  description="macOS blocks the Dodaios disk image on first launch because it is not yet notarized by Apple. Here is what the warning means and how to open the app."
+  heading="Opening Dodaios the first time on macOS"
 >
   <p>
-    The first time you open Personal Jarvis on a Mac, macOS may refuse it and
+    The first time you open Dodaios on a Mac, macOS may refuse it and
     say the app <strong>&ldquo;is damaged and can&rsquo;t be opened&rdquo;</strong>,
     or that it <strong>cannot be checked for malicious software</strong>.
   </p>
   <p>
     The download is not damaged. That message is what macOS shows for any app
-    that has not been through Apple&rsquo;s notarization service, and Personal
-    Jarvis has not — notarization requires a paid Apple Developer membership,
+    that has not been through Apple&rsquo;s notarization service, and Dodaios
+    has not — notarization requires a paid Apple Developer membership,
     which this project does not hold yet. The wording is Apple&rsquo;s, not
     ours, and it is the same for every unnotarized app. Our
     <a href={CODE_SIGNING_HREF}>code signing policy</a> tracks where this
@@ -49,11 +49,17 @@ import { REPO } from "@/lib/install";
     in public from the source in
     <a href={REPO}>this repository</a>.
   </p>
+  <p class="legal-doc__note">
+    The current release was built before the project was renamed, so the disk
+    image and the app inside it are still
+    called <strong>Personal Jarvis</strong>. That is the name macOS shows in
+    the steps below.
+  </p>
 
   <h2>Opening it on macOS 15 Sequoia or newer</h2>
   <ol>
     <li>
-      Drag Personal Jarvis into your Applications folder, then double-click it
+      Drag the app into your Applications folder, then double-click it
       once and dismiss the warning. <strong>Do not skip this step.</strong>
       macOS only offers the override below for an app you have actually tried
       to open, so on a fresh install the button in step 3 is not there yet.
@@ -63,7 +69,7 @@ import { REPO } from "@/lib/install";
       scroll to the <strong>Security</strong> section near the bottom.
     </li>
     <li>
-      You will see a line naming Personal Jarvis as blocked, with an
+      You will see a line naming the app as blocked, with an
       <strong>Open Anyway</strong> button next to it. Click it and authenticate.
     </li>
     <li>Open the app again and confirm once more. From then on it opens normally.</li>

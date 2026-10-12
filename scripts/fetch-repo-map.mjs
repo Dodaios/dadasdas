@@ -47,9 +47,9 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(fileURLToPath(new URL(".", import.meta.url)), "..");
 const OUT = join(ROOT, "src", "data", "repo-map.json");
 
-const REPO = "PersonalJarvis/PersonalJarvis";
+const REPO = "Dodaios/Dodaios";
 const API = "https://api.github.com";
-const UA = "personal-jarvis-website (repo map)";
+const UA = "dodaios-website (repo map)";
 
 /**
  * The three directories the walkthrough opens, in the order it opens them.

@@ -163,7 +163,7 @@ licence on the right.
   `aria-labelledby`, so the accessible name and the printed one cannot drift.
 - **No handle is written in this file.** `socialCounts.ts` is where the site
   states which account is which — the X account is the project's
-  `@PersonalJarvis` and not the maintainer's personal one, so a handle typed
+  `@dodaios` and not the maintainer's personal one, so a handle typed
   from memory points at the wrong profile. The footer maps its ids to platform
   names and nothing more.
 - **GitHub is deliberately not in "Follow".** The repository is already the

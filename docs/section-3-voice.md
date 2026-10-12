@@ -34,7 +34,7 @@ product is selling is the one that stops fighting the page.
 
 But the pictures alone do not make the case. Someone who only looks at the two
 frames learns that hands come off the keyboard, which is not the same as
-learning what Jarvis is. That is what the standfirst and the two captions are
+learning what Dodaios is. That is what the standfirst and the two captions are
 for, and why they describe the app rather than the photograph. This was the
 maintainer's own complaint about an earlier version, 2026-08-29: *"man merkt
 nicht, was Jarvis wirklich der Unterschied ist."*
@@ -303,13 +303,13 @@ better, lighting the microphone in the photograph and deleting it.
 The man in the night frame says one sentence, and the reader's scrolling is what
 says it:
 
-> Hey Jarvis, the tests are red. Find out why and fix it.
+> Hey Dodaios, the tests are red. Find out why and fix it.
 
 **It is a request, not a greeting.** The section's claim is that real work goes
 to a coding agent in an isolated copy of your files, so the sentence has to be a
 job somebody would actually hand over and one the app can honestly take. "Hey
-Jarvis" is the wake word every reader already knows the shape of; the app's own
-is whatever the owner picks.
+Dodaios" stands in for the wake word here; the app's own is whatever the owner
+picks.
 
 **It is printed WITH the picture, not laid over it.** The bubble has been three
 things, and the last one is the point:

@@ -6,12 +6,13 @@ both.
 
 ## What this is
 
-The marketing website for the Personal Jarvis project. It replaces the previous
-site, which was retired on 2026-08-28 together with its repository.
+The marketing website for the Dodaios project, which was called Personal Jarvis
+until October 2026. It replaces the previous site, which was retired on
+2026-08-28 together with its repository.
 
 ## Where this folder lives
 
-This is its **own git repository**, sitting inside the Personal Jarvis app
+This is its **own git repository**, sitting inside the Dodaios app
 checkout as `personaljarvisweb/` so one folder holds both projects.
 
 - The **parent** folder is the app's repo and is **public**. This repo is

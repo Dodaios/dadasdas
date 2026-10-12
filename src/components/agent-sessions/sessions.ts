@@ -72,7 +72,7 @@ const LOCAL: Model = { provider: "Ollama · local", chip: "qwen3:8b" };
 export const AGENTS: Readonly<Record<AgentId, Agent>> = {
   jarvis: {
     id: "jarvis",
-    name: "Jarvis",
+    name: "Dodaios",
     title: "Lead",
     shape: "ghost",
     color: "--ink",
@@ -213,7 +213,7 @@ export const AGENTS: Readonly<Record<AgentId, Agent>> = {
         k: "reply",
         blocks: [
           { p: "Draft for the announcement post:" },
-          { p: "**Your agents now work as a team.** Give Jarvis one goal. It splits the work, hands each part to the agent that owns it, and only comes back when something needs you." },
+          { p: "**Your agents now work as a team.** Give Dodaios one goal. It splits the work, hands each part to the agent that owns it, and only comes back when something needs you." },
           { p: "New in v1.4: group chats between agents, a live browser for every agent, and routines that run on a schedule." },
         ],
         done: "31s",
@@ -222,7 +222,7 @@ export const AGENTS: Readonly<Record<AgentId, Agent>> = {
       { k: "thought", secs: "4s", steps: ["Kept the headline, it carries the idea.", "Cut the feature list; it belongs in the release notes."] },
       {
         k: "reply",
-        blocks: [{ p: "**Your agents now work as a team.** Give Jarvis one goal — it hands out the work and only comes back when something needs you." }],
+        blocks: [{ p: "**Your agents now work as a team.** Give Dodaios one goal — it hands out the work and only comes back when something needs you." }],
         done: "4s",
       },
       { k: "memory", file: "voice-guide.md" },

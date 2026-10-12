@@ -721,7 +721,7 @@ voice section drop theirs below their breakpoints. Believe the attribute and
 that section's running length becomes `track − viewport`, which at the window
 where it has just stopped pinning is about a dozen pixels: the square crosses
 the whole section in one wheel notch and then sits in the corner. That was "it
-does not work at all in How to install Jarvis".
+does not work at all in How to install Dodaios".
 
 #### Turning the corner
 

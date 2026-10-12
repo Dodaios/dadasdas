@@ -309,7 +309,7 @@ and the IDE's own data in `app/IdeScene.tsx`.
   the turn's work runs on the rail — a streaming thought, then one quiet line
   per call with the service's real logo, Gigi working on the state line — and
   the answer is said out loud: words not yet spoken stay grey and light up as
-  the voice reaches them, Gigi talking under it. Jarvis hands the coding part
+  the voice reaches them, Gigi talking under it. Dodaios hands the coding part
   to Scout
 - **The Agentic IDE.** Scout (Claude Code), Atlas (Codex) and Quill (Gemini
   CLI) work side by side in one workspace; Scout ends with a pull request,

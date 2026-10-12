@@ -476,7 +476,7 @@ function Compose({ typed }: { typed: number }) {
     <>
       <WindowHeader
         title="CLI Test Hub"
-        subtitle="Tell Jarvis in plain language what to do with your CLIs"
+        subtitle="Tell Dodaios in plain language what to do with your CLIs"
       />
 
       <div style={{ marginTop: 44 }}>
@@ -550,7 +550,7 @@ function Result() {
     <>
       <WindowHeader
         title="CLI Test Hub"
-        subtitle="Tell Jarvis in plain language what to do with your CLIs"
+        subtitle="Tell Dodaios in plain language what to do with your CLIs"
       />
 
       <div
@@ -562,7 +562,7 @@ function Result() {
           padding: "26px 28px",
         }}
       >
-        <span style={{ fontSize: 28, color: "var(--muted)" }}>Jarvis says</span>
+        <span style={{ fontSize: 28, color: "var(--muted)" }}>Dodaios says</span>
         {/* Deliberately asserts no number. Everything else in this frame is
             verbatim from the catalog; a spoken answer is per-run, and inventing
             "you have three open pull requests" would be the one made-up fact on

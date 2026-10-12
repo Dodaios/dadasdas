@@ -29,7 +29,7 @@ to squint at it again:
 
 ---
 
-# Block A — "How to install Jarvis"
+# Block A — "How to install Dodaios"
 
 ## What it says
 
@@ -355,7 +355,7 @@ on the first one.
 
 ## The artwork
 
-The Jarvis mark as a **dither relief**. Recipe, pipeline and acceptance live in
+The Dodaios mark as a **dither relief**. Recipe, pipeline and acceptance live in
 [`dither-relief.md`](dither-relief.md); this file does not repeat them.
 
 - Sized from its GRID CELL: its column's width, its row's height, centred in
@@ -389,25 +389,22 @@ The Jarvis mark as a **dither relief**. Recipe, pipeline and acceptance live in
 - Below 1024px it is dropped, not shrunk. `client:media` means the bundle is
   never fetched there
 
-Four things about the mark are decisions, not defaults:
+The mark is the hooded figure, the project's logo since the rename to Dodaios
+in October 2026. Its geometry is not typed out: `src/components/mark/figure.ts`
+parses the one path in `src/assets/dodaios-logo.svg`, a copy of the app
+repository's `assets/brand/dodaios-logo.svg`, and extrudes it as a single
+shape with the eyes cut through. Replace the file and the relief follows. Until
+then the mark was the app's ghost mascot, built by hand from its coordinates.
 
-- **The face is on the front only.** The back of the turn is a blank body
-  (maintainer, 2026-08-29)
-- **The whole face is carried across, not a summary of it.** Sockets, pupils,
-  mouth, the two displacement slices beside the eyes, both scanlines and the
-  nine loose glitch pixels, at the drawing's own coordinates. Three shapes were
-  tried first — two eyes and a mouth — and read as too plain beside the app's
-  own mascot (maintainer, 2026-08-29)
-- **Eyes and mouth are black**, which in this raster means *no dots*: they fall
-  under every threshold in the matrix and the page floor shows through. Which
-  side of a feature is black therefore INVERTS against the drawing: the drawing
-  paints a light pupil on a dark body, the relief stands a paper pupil in a
-  dark socket. Same structure, one material logic. It is also why the glitch
-  pixels take the paper material — black chips on an unprinted floor would be
-  invisible
-- **The arms reach further than the drawing does.** In 2D they are legible
-  because nothing sits in front of them; in 3D the body's own bevelled edge
-  eats a stub that short
+Decisions about the mark, not defaults:
+
+- **The eyes are holes**, which in this raster means *no dots*: the page floor
+  shows through them. The logo is one flat shape with openings and is extruded
+  as exactly that, so there is no second material and the back of the turn
+  shows the same figure mirrored
+- **The bevel is taken inside the outline.** The hood, the body and the foot
+  are separated by gaps a few units wide; a bevel that grows outwards, which is
+  the default, closes them into one blob
 
 ---
 

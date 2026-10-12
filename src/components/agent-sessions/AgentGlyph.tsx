@@ -1,6 +1,6 @@
 /**
  * An agent as the app draws it: a flat silhouette in its identity colour with
- * two ink eyes. Jarvis is the ghost — the product's own mark — in paper.
+ * two ink eyes. The lead is the ghost, the portrait the app gives its lead agent, in paper.
  *
  * The specialist outlines are lifted from the app's society/AgentSymbol.tsx
  * (40x44 box); the ghost body from its GigiAvatar (240x260 box), scaled into

@@ -1,5 +1,5 @@
 /**
- * The Jarvis mark, extruded and turning, rastered live.
+ * The Dodaios mark, extruded and turning, rastered live.
  *
  * docs/DITHER-RELIEF.md keeps these assets as finished PNGs and allows real
  * time in exactly one case: when the form has to move. It does here, so the
@@ -62,7 +62,7 @@ import {
   MATRIX_SIZE,
   thresholdTexture,
 } from "./dither";
-import { buildMark } from "./gigi";
+import { buildMark } from "./figure";
 
 /** The site's ink, as sRGB components. */
 const INK = new Color(247 / 255, 247 / 255, 244 / 255);
@@ -191,8 +191,8 @@ export function TurningMark({ className }: Props) {
       meshes.push(mesh);
     });
 
-    // Normalise on the BODY, not on everything: the arms stick out, and sizing
-    // on them would shrink the mark every time an arm is redrawn.
+    // Normalise on the part `buildMark` names. The figure is one extrusion,
+    // so that is the whole mark, hood tip to foot.
     const box = new Box3().setFromObject(meshes[bodyIndex]);
     const size = new Vector3();
     const centre = new Vector3();
@@ -206,7 +206,7 @@ export function TurningMark({ className }: Props) {
      *
      * The turn sweeps the mark through every angle about Y, so its widest
      * moment is not its width — it is its RADIUS about the turn axis,
-     * `max sqrt(x² + z²)` over every vertex. Anything narrower clips an arm at
+     * `max sqrt(x² + z²)` over every vertex. Anything narrower clips the cape at
      * some angle; anything wider is empty margin, and margin is expensive here
      * because the graphic is already limited by the column it sits in.
      *

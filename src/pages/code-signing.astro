@@ -15,12 +15,12 @@ import LegalPage from "@/components/LegalPage.astro";
 import { PRIVACY_HREF } from "@/lib/legal";
 import { REPO, RELEASES, MACOS_FIRST_LAUNCH_HREF } from "@/lib/install";
 
-const ORG = "https://github.com/PersonalJarvis";
+const ORG = "https://github.com/Dodaios";
 ---
 
 <LegalPage
-  title="Code signing policy — Personal Jarvis"
-  description="How the Windows installer of Personal Jarvis is signed, who approves a signature, and what the program does with your data."
+  title="Code signing policy — Dodaios"
+  description="How the Windows installer of Dodaios is signed, who approves a signature, and what the program does with your data."
   heading="Code signing policy"
 >
   <p>
@@ -38,8 +38,9 @@ const ORG = "https://github.com/PersonalJarvis";
     Only files built from this project's own source code by its public release
     workflow on GitHub Actions: the Windows installer
     <code>PersonalJarvis-Setup-x64.exe</code> and the program files it
-    installs. They are built from the
-    <a href={REPO}>PersonalJarvis/PersonalJarvis</a> repository at the tag of
+    installs. The file keeps the project's previous name, Personal Jarvis,
+    until a release renames it. They are built from the
+    <a href={REPO}>Dodaios/Dodaios</a> repository at the tag of
     each release and published on the <a href={RELEASES}>release page</a>.
     Nothing built elsewhere, and nothing from another project, is signed with
     this certificate. Third-party open source libraries bundled in the
@@ -72,13 +73,13 @@ const ORG = "https://github.com/PersonalJarvis";
   <ul>
     <li>
       <strong>Committers and reviewers:</strong> members of the
-      <a href={`${ORG}`}>PersonalJarvis GitHub organization</a> with write
+      <a href={`${ORG}`}>Dodaios GitHub organization</a> with write
       access to the repository. Every change reaches the release branch through
       the repository's pull request and required-check rules.
     </li>
     <li>
       <strong>Approvers:</strong> owners of the
-      <a href={`${ORG}`}>PersonalJarvis GitHub organization</a>. Each signing
+      <a href={`${ORG}`}>Dodaios GitHub organization</a>. Each signing
       request is approved by hand, once per release.
     </li>
   </ul>
@@ -89,7 +90,7 @@ const ORG = "https://github.com/PersonalJarvis";
 
   <h2>Privacy</h2>
   <p>
-    Personal Jarvis contains no telemetry, analytics or crash reporting. It
+    Dodaios contains no telemetry, analytics or crash reporting. It
     sends data only to services you connect yourself — for example the AI
     provider whose key or subscription you add, or a channel such as Telegram —
     and only when you use them. To offer updates it asks GitHub for the latest

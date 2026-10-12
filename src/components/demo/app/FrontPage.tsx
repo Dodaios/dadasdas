@@ -525,7 +525,7 @@ function TurnWork({ frame }: { frame: FrontFrame }) {
 function hintFor(phase: FrontFrame["phase"]): string {
   switch (phase) {
     case "home":
-      return "Say “Hey Jarvis” or press Start";
+      return "Say your wake word or press Start";
     case "thinking":
     case "working":
       return "Thinking…";

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://personaljarvis.ai/sitemap-index.xml
+Sitemap: https://dodaios.ai/sitemap-index.xml

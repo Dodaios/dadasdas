@@ -448,7 +448,7 @@ function VoiceStage({ reduced }: { reduced: boolean }) {
         type="button"
         className="as-voicebar"
         onClick={() => setState((s) => (s === "ready" ? "listening" : s))}
-        aria-label="Talk to Jarvis"
+        aria-label="Talk to Dodaios"
       >
         <span className="as-voicebar__dots" aria-hidden="true">
           {Array.from({ length: 44 }, (_, i) => (
@@ -460,9 +460,9 @@ function VoiceStage({ reduced }: { reduced: boolean }) {
           <span className="as-mono">{state === "ready" ? "READY" : state === "listening" ? "LISTENING" : "SPEAKING"}</span>
           <span className="as-voicebar__hint">
             {state === "ready"
-              ? "Say “Hey Jarvis” or tap the bar to start"
+              ? "Say your wake word or tap the bar to start"
               : state === "listening"
-                ? "“Hey Jarvis, how is the launch going?”"
+                ? "“Hey Dodaios, how is the launch going?”"
                 : "Copy is done, the clip renders tonight, and three posts wait for your OK."}
           </span>
           <span className="as-voicebar__model"><I.Sparkle size={12} /> Prompt <b>Realtime voice</b></span>
@@ -746,7 +746,7 @@ export default function AgentSessions() {
           <header className="as-pane__head as-pane__head--lead">
             <span className="as-pane__cell">
               {leadMode === "voice" ? (
-                <span className="as-voicenote">Voice runs on Jarvis' voice brain, not on the model picked for the typed chat.</span>
+                <span className="as-voicenote">Voice runs on Dodaios' voice brain, not on the model picked for the typed chat.</span>
               ) : (
                 <span className="as-provider">
                   <span className="as-provider__mark"><I.Sparkle size={12} /></span>
@@ -846,7 +846,7 @@ export default function AgentSessions() {
               onClick={() => setSession("jarvis")}
             >
               <img src={gigiUrl} width={50} height={50} alt="" className="as-gigi" draggable={false} />
-              <span className="as-lead__name">Jarvis <span className="as-lead__tag">Lead</span></span>
+              <span className="as-lead__name">Dodaios <span className="as-lead__tag">Lead</span></span>
             </button>
             <span className="as-rail__rule" />
             {showGroup && (

@@ -92,7 +92,7 @@ export const INSTALL_ID = "install";
  * When this site grows a `/docs` route, this constant is the only line that
  * has to change.
  */
-export const DOCS_URL = "https://github.com/PersonalJarvis/PersonalJarvis/tree/main/docs";
+export const DOCS_URL = "https://github.com/Dodaios/Dodaios/tree/main/docs";
 
 /* ---------------------------------------------------------------------------
  * The detail pages

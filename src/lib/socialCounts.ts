@@ -6,7 +6,7 @@
  * invite code of its own — those live here and in
  * `scripts/fetch-social-counts.mjs`, so the identity of an account is stated
  * in two files instead of scattered across markup. That matters for one of
- * them in particular: the X account is @PersonalJarvis, not @Ruben_Luetke.
+ * them in particular: the X account is @dodaios, not @Ruben_Luetke.
  * Maintainer directive of 2026-08-29, superseding the 2026-07-18 one that
  * sent every X link to the personal profile: the project-named account is
  * live and verified, and the site follows the project rather than a person.
@@ -40,7 +40,7 @@ export interface SocialStat {
   live?: LiveSource;
 }
 
-const GITHUB_REPO = "PersonalJarvis/PersonalJarvis";
+const GITHUB_REPO = "Dodaios/Dodaios";
 const DISCORD_INVITE = "x7USduHxbc";
 
 /**
@@ -54,14 +54,14 @@ export const SOCIAL_STATS: SocialStat[] = [
   {
     id: "youtube",
     label: "Subscribers",
-    href: "https://www.youtube.com/@PersonalJarvis",
+    href: "https://www.youtube.com/@Dodaios",
     value: counts.platforms.youtube.value,
     readAt: counts.platforms.youtube.readAt,
   },
   {
     id: "x",
     label: "Followers",
-    href: "https://x.com/PersonalJarvis",
+    href: "https://x.com/dodaios",
     value: counts.platforms.x.value,
     readAt: counts.platforms.x.readAt,
   },

@@ -2,7 +2,7 @@
  * What the front page plays: one spoken turn, from the empty page to the
  * answer. Placeholder content — no real person, project or account.
  *
- * The person asks for a failing test to be fixed; Jarvis finds the failed
+ * The person asks for a failing test to be fixed; Dodaios finds the failed
  * run on GitHub and hands the job to Scout, who then works in the Agentic
  * IDE — the scene the demo moves to next.
  */

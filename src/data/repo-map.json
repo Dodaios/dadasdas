@@ -1,7 +1,7 @@
 {
-  "repo": "PersonalJarvis/PersonalJarvis",
+  "repo": "Dodaios/Dodaios",
   "branch": "main",
-  "description": "Self-hosted voice assistant. Speak to your computer: it answers aloud, types your dictation, and operates your apps.",
+  "description": "Your AI assistant, built for the agentic era. Open source and local: talk to it, and it runs your agents, your coding CLIs, your browser and your apps. Windows, macOS, Linux.",
   "license": "Apache-2.0",
   "language": "Python",
   "topics": [
@@ -12,15 +12,15 @@
     "coding-agent",
     "computer-use"
   ],
-  "stars": 31,
-  "forks": 12,
-  "openIssues": 4,
+  "stars": 186,
+  "forks": 70,
+  "openIssues": 94,
   "lastCommit": {
-    "message": "fix(onboarding): a failed config write must not end first run at step 04",
-    "sha": "3db9b6a",
-    "date": "2026-08-29T08:39:21Z"
+    "message": "fix(packaging): preserve licenses and correct OAuth disclosures (#491)",
+    "sha": "bdaa4f2",
+    "date": "2026-10-12T15:30:20Z"
   },
-  "readAt": "2026-08-29T16:00:01.779Z",
+  "readAt": "2026-10-12T16:23:44.706Z",
   "pages": {
     "root": {
       "path": "",
@@ -62,6 +62,10 @@
           "type": "file"
         },
         {
+          "name": ".ignore",
+          "type": "file"
+        },
+        {
           "name": ".mailmap",
           "type": "file"
         },
@@ -75,10 +79,6 @@
         },
         {
           "name": "CHANGELOG.md",
-          "type": "file"
-        },
-        {
-          "name": "CLAUDE.md",
           "type": "file"
         },
         {
@@ -102,7 +102,15 @@
           "type": "file"
         },
         {
+          "name": "PersonalJarvisDesignDesign.md.md",
+          "type": "file"
+        },
+        {
           "name": "README.md",
+          "type": "file"
+        },
+        {
+          "name": "README.zh-CN.md",
           "type": "file"
         },
         {
@@ -110,8 +118,16 @@
           "type": "file"
         },
         {
+          "name": "SPONSORS.md",
+          "type": "file"
+        },
+        {
           "name": "TRADEMARK.md",
           "type": "file"
+        },
+        {
+          "name": "art",
+          "type": "dir"
         },
         {
           "name": "assets",
@@ -135,10 +151,6 @@
         },
         {
           "name": "desktop-ttu-baseline.json",
-          "type": "file"
-        },
-        {
-          "name": "desktop-ttu-latest.json",
           "type": "file"
         },
         {
@@ -250,6 +262,10 @@
           "type": "dir"
         },
         {
+          "name": "third_party",
+          "type": "dir"
+        },
+        {
           "name": "tools",
           "type": "dir"
         },
@@ -267,6 +283,10 @@
         },
         {
           "name": "video",
+          "type": "dir"
+        },
+        {
+          "name": "videos",
           "type": "dir"
         },
         {
@@ -372,6 +392,18 @@
           "type": "file"
         },
         {
+          "name": "agent_resets.py",
+          "type": "file"
+        },
+        {
+          "name": "agent_runtimes",
+          "type": "dir"
+        },
+        {
+          "name": "agent_screen",
+          "type": "dir"
+        },
+        {
           "name": "agent_usage.py",
           "type": "file"
         },
@@ -388,6 +420,14 @@
           "type": "file"
         },
         {
+          "name": "app_actions",
+          "type": "dir"
+        },
+        {
+          "name": "appshot",
+          "type": "dir"
+        },
+        {
           "name": "artifacts",
           "type": "dir"
         },
@@ -401,10 +441,6 @@
         },
         {
           "name": "autostart",
-          "type": "dir"
-        },
-        {
-          "name": "awareness",
           "type": "dir"
         },
         {
@@ -476,6 +512,10 @@
           "type": "dir"
         },
         {
+          "name": "computers",
+          "type": "dir"
+        },
+        {
           "name": "contacts",
           "type": "dir"
         },
@@ -536,6 +576,14 @@
           "type": "dir"
         },
         {
+          "name": "jarvisx",
+          "type": "dir"
+        },
+        {
+          "name": "live",
+          "type": "dir"
+        },
+        {
           "name": "local_models",
           "type": "dir"
         },
@@ -580,6 +628,10 @@
           "type": "dir"
         },
         {
+          "name": "progression",
+          "type": "dir"
+        },
+        {
           "name": "realtime",
           "type": "dir"
         },
@@ -605,6 +657,10 @@
         },
         {
           "name": "skills",
+          "type": "dir"
+        },
+        {
+          "name": "society",
           "type": "dir"
         },
         {
@@ -656,6 +712,10 @@
           "type": "dir"
         },
         {
+          "name": "voice_engine",
+          "type": "dir"
+        },
+        {
           "name": "workflows",
           "type": "dir"
         },
@@ -672,7 +732,7 @@
       "# Personal Jarvis - Windows quick-install bootstrap (Stage 1)",
       "#",
       "# Usage (from PowerShell):",
-      "#   irm https://raw.githubusercontent.com/PersonalJarvis/PersonalJarvis/main/install/install.ps1 | iex",
+      "#   irm https://raw.githubusercontent.com/Dodaios/Dodaios/main/install/install.ps1 | iex",
       "#",
       "# This bootstrap is intentionally small. It:",
       "#   1. Verifies Python 3.11+ and git are available.",

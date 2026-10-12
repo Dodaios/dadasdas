@@ -5,9 +5,10 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  // The domain is owned and free; the previous site that served it was retired
-  // on 2026-08-28. Sitemap and canonical URLs need it set even before deploy.
-  site: "https://personaljarvis.ai",
+  // Sitemap and canonical URLs are built from this. The domain GitHub Pages
+  // actually serves is `public/CNAME`, which moves separately: see
+  // docs/deploy.md, "Moving to dodaios.ai".
+  site: "https://dodaios.ai",
   integrations: [react(), sitemap()],
 
   // ONE dev server for this site, at a fixed address: http://127.0.0.1:4399.
@@ -69,7 +70,7 @@ export default defineConfig({
  */
 function pinDevReactRuntime() {
   return {
-    name: "jarvis:pin-dev-react-runtime",
+    name: "dodaios:pin-dev-react-runtime",
     /** @param {unknown} _config @param {{ command: string }} environment */
     config(_config, { command }) {
       if (command !== "serve") return;

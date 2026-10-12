@@ -790,7 +790,7 @@ const SIDE_PANEL_TABS = [
   { id: "changes", label: "Changes", icon: FileDiff },
   { id: "files", label: "Folder", icon: FolderTree },
   { id: "git", label: "Git", icon: GitBranch },
-  { id: "office", label: "Jarvis Verse", icon: Building2 },
+  { id: "office", label: "Dodaios Verse", icon: Building2 },
 ] as const;
 
 /** IdeSidePanelRail: what a closed panel leaves on the right edge. */
@@ -1065,7 +1065,7 @@ function ProjectRow({ project }: { project: TreeProject }) {
 
 /**
  * What the app's Sidebar shows in its scroll region on the IDE section: the
- * "Back to Jarvis" row (Sidebar.tsx, `onIdeSection`) and the project tree
+ * "Back to Dodaios" row (Sidebar.tsx, `onIdeSection`) and the project tree
  * (IdeProjectTree). Drop it into the sidebar's
  * `flex min-h-0 flex-1 flex-col overflow-y-auto scrollbar-jarvis` region.
  */
@@ -1076,14 +1076,14 @@ export function IdeNav(): ReactNode {
         <button type="button" tabIndex={-1}
           className="flex min-h-8 w-full items-center gap-2 rounded-md px-2 text-left text-xs text-muted-foreground transition-colors hover:bg-accent hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
           <ChevronLeft aria-hidden className="h-3.5 w-3.5 shrink-0" />
-          <span>Back to Jarvis</span>
+          <span>Back to Dodaios</span>
         </button>
       </nav>
       <div data-testid="ide-project-tree" className="flex-1 px-2 pb-3 pt-2">
         <div className="flex h-8 items-center justify-between pl-2 pr-1 text-[15px] font-semibold text-foreground">
           <span>Workspaces</span>
           <div className="flex items-center gap-0.5">
-            <button type="button" tabIndex={-1} title="Jarvis Live"
+            <button type="button" tabIndex={-1} title="Dodaios Live"
               className="rounded-md p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><Mic className="h-3.5 w-3.5" /></button>
             <button type="button" tabIndex={-1} title="Connect project folder"
               className="rounded-md p-1.5 text-muted-foreground hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><Plus className="h-3.5 w-3.5" /></button>

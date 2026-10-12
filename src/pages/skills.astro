@@ -120,19 +120,19 @@ const triggers = SKILLS.flatMap((skill) => skill.triggers);
 const byTriggerType = groupBy(triggers, (trigger) => trigger.type);
 
 /* How many speak for a plugin, and how many are the app's own. The first number
- * is the interesting one: connecting a service is also what teaches Jarvis how
+ * is the interesting one: connecting a service is also what teaches Dodaios how
  * to talk about it. */
 const pluginBacked = SKILLS.filter((skill) => skill.plugin).length;
 ---
 
 <Base
-  title="How a skill is written — Personal Jarvis"
-  description="A skill is a plain text file with a switch. Here is a real one, field by field, and the thirty that ship with Personal Jarvis."
+  title="How a skill is written — Dodaios"
+  description="A skill is a plain text file with a switch. Here is a real one, field by field, and the thirty that ship with Dodaios."
 >
   <DetailHead
     eyebrow="Skills"
     title="A skill is a text file. That is the whole trick."
-    lede="Everything Jarvis knows how to do is a few lines of plain English in a file: what it is for, what sets it off, and how careful to be. The ones it ships with and the ones you write sit in the same list, in the same format, with the same switch."
+    lede="Everything Dodaios knows how to do is a few lines of plain English in a file: what it is for, what sets it off, and how careful to be. The ones it ships with and the ones you write sit in the same list, in the same format, with the same switch."
     facts={[
       { value: String(SKILLS.length), label: "built in" },
       { value: String(byCategory.size), label: "categories" },
@@ -339,7 +339,7 @@ const pluginBacked = SKILLS.filter((skill) => skill.plugin).length;
           <div>
             <dt>{pluginBacked} of {SKILLS.length} speak for a plugin</dt>
             <dd>
-              Connecting a service also teaches Jarvis how to talk about it: each
+              Connecting a service also teaches Dodaios how to talk about it: each
               of those ships beside its plugin and is the reason "put that in
               Notion" reaches Notion rather than a search engine.
               <span class="fact-list__count">shipped in pairs</span>
