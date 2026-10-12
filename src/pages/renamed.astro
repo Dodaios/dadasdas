@@ -20,7 +20,7 @@
  * It borrows the legal pages' frame for its typography: one bounded column of
  * prose with the site's chrome and footer.
  *
- * An inline element never starts a source line here: the build's HTML
+ * An inline element or expression never starts a source line here: the build's HTML
  * compression drops the line break in front of one, and the space with it.
  */
 import LegalPage from "@/components/LegalPage.astro";
@@ -92,8 +92,8 @@ import { FORMER_NAME, LAST_OLD_UPDATER_VERSION } from "@/lib/rename";
   <p>
     If you installed the desktop app from a download, get the installer for
     your system from the <a href={RELEASES}>release page</a> and install it. It
-    has to be a release newer than {LAST_OLD_UPDATER_VERSION}:
-    {LAST_OLD_UPDATER_VERSION} itself still looks at the old address.
+    has to be a release newer than {LAST_OLD_UPDATER_VERSION}, because that
+    version itself still looks at the old address.
   </p>
 
   <h2>Questions</h2>
