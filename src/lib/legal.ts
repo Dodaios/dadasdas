@@ -18,7 +18,7 @@ export const OPERATOR = {
   /* A Cloudflare Email Routing address on the site's own domain, forwarded
      to the operator's inbox, so the published contact is not a personal
      mailbox. */
-  email: "contact@personaljarvis.ai",
+  email: "contact@dodaios.ai",
 } as const;
 
 /** The date the legal texts were last reviewed against the code. */
