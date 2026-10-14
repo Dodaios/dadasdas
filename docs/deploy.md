@@ -17,7 +17,7 @@ would 404. The name is not cosmetic.
 
 It also decides where the blog lives. The blog is a project repository
 (`Dodaios/blog`, built with `base: "/blog"`), and GitHub serves a project
-repository under the organisation site's custom domain only while a repository
+repository under the organisation site's address only while a repository
 named `<org>.github.io` holds that domain. Without it the blog answers only at
 `dodaios.github.io/blog/`.
 
@@ -80,32 +80,28 @@ it, and nothing in that folder changes with the site's domain.
 A push does not deploy it; `wrangler deploy` from that folder does. Its
 README covers the rules, the secret and the live check.
 
-## DNS
+## Domain
 
-Four `A` records at the apex to GitHub's Pages addresses, a `CNAME` on `www`,
-and `public/CNAME` in the build so a deploy cannot reset the domain.
+GitHub Pages has **no custom domain** for this site: it answers at
+`dodaios.github.io` over GitHub's own certificate, and so do the project
+repositories under it (`/blog/`, `/marketplace/`, `/Dodaios/`). The app fetches
+its marketplace index and its wheel index from those `dodaios.github.io`
+addresses; with a custom domain set, GitHub answers them with a redirect to
+`http://dodaios.ai/...`, and the app's https-only client refuses that hop.
 
-Every record is **DNS-only**. Behind Cloudflare's proxy GitHub never sees the
-validation request and can never issue the certificate; the site then sits on
-"Certificate not yet created" with no error to explain it.
+`dodaios.ai` is served by the Cloudflare Worker `dodaios-site` (routes
+`dodaios.ai/*` and `www.dodaios.ai/*`). It fetches the same path from
+`https://dodaios.github.io`, passes the answer through, rewrites redirects that
+name `dodaios.github.io` to `dodaios.ai`, and sends `www` to the apex. The DNS
+records for the apex and `www` stay proxied, so the Worker runs.
 
-## Moving to dodaios.ai
+Do not set a custom domain on the Pages site again and do not add a
+`public/CNAME`: either brings the redirect back. A project repository caches
+the redirect in its last deployment, so after changing the domain setting each
+project site has to be deployed once more.
 
-The source builds for `https://dodaios.ai`: canonical URLs, the sitemap,
-`robots.txt` and `llms.txt` all name it. `public/CNAME` is the one line that
-decides which domain GitHub Pages actually serves, and it is flipped last, in
-its own change, because a deploy with the new name in it takes the old domain
-off the site at once.
-
-The order that keeps both addresses answering:
-
-1. Name this repository `dodaios.github.io`, so it is the organisation site and
-   the blog is served under its domain again.
-2. Point the `dodaios.ai` apex at GitHub's Pages addresses and `www` at
-   `dodaios.github.io`, both DNS-only (see "DNS" above).
-3. Change `public/CNAME` to `dodaios.ai`, merge, and wait for the certificate.
-4. Redirect `personaljarvis.ai` to `dodaios.ai` path for path, so old links and
-   old link previews keep working. `token.personaljarvis.ai` is not part of
-   that redirect and must keep resolving to the Worker.
-5. Move the published contact address in `src/lib/legal.ts` once mail for the
-   new domain is routed.
+`personaljarvis.ai`, `www.` and `blog.` redirect path for path to `dodaios.ai`
+(Worker `personaljarvis-redirect`). `token.personaljarvis.ai` and
+`oauth.personaljarvis.ai` are not part of that redirect and must keep resolving
+to their Worker. The published contact address in `src/lib/legal.ts` moves once
+mail for the new domain is routed.
